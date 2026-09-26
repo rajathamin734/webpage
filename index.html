@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AutoDrive - Cars</title>
+    <title>AutoDrive - Car Information</title>
 
     <!-- ================= INTERNAL CSS ================= -->
     <style>
 
-        /* ---------- RESET ---------- */
+        /* ===== BASIC RESET ===== */
 
         * {
             margin: 0;
@@ -24,12 +25,12 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f19;
+            background-color: #0b0f19;
             color: white;
         }
 
 
-        /* ---------- NAVBAR ---------- */
+        /* ===== NAVIGATION ===== */
 
         nav {
             position: sticky;
@@ -42,14 +43,14 @@
 
             padding: 20px 7%;
 
-            background: rgba(11, 15, 25, 0.95);
-            border-bottom: 1px solid #252b3a;
+            background-color: #111827;
+            border-bottom: 1px solid #374151;
         }
 
         .logo {
             font-size: 28px;
             font-weight: bold;
-            color: #ff3b30;
+            color: #ef4444;
         }
 
         .logo span {
@@ -58,7 +59,7 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -70,18 +71,18 @@
         }
 
         .nav-links a:hover {
-            color: #ff3b30;
+            color: #ef4444;
         }
 
 
-        /* ---------- HERO ---------- */
+        /* ===== HOME / HERO ===== */
 
         .hero {
             min-height: 90vh;
 
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
 
             text-align: center;
 
@@ -89,10 +90,10 @@
 
             background:
                 linear-gradient(
-                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.65),
                     rgba(0, 0, 0, 0.75)
                 ),
-                url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80");
+                url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80");
 
             background-size: cover;
             background-position: center;
@@ -103,44 +104,44 @@
         }
 
         .hero h1 {
-            font-size: 65px;
+            font-size: 60px;
             margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: #ff3b30;
+            color: #ef4444;
         }
 
         .hero p {
-            font-size: 21px;
-            color: #ddd;
+            font-size: 20px;
             line-height: 1.7;
-            margin-bottom: 35px;
+            color: #d1d5db;
+            margin-bottom: 30px;
         }
 
         .hero-button {
             display: inline-block;
 
-            padding: 15px 30px;
+            padding: 14px 28px;
 
-            background: #ff3b30;
+            background-color: #ef4444;
             color: white;
-
-            border-radius: 8px;
 
             text-decoration: none;
             font-weight: bold;
+
+            border-radius: 7px;
 
             transition: 0.3s;
         }
 
         .hero-button:hover {
-            background: #ff6259;
+            background-color: #dc2626;
             transform: translateY(-3px);
         }
 
 
-        /* ---------- SECTION ---------- */
+        /* ===== GENERAL SECTIONS ===== */
 
         section {
             padding: 90px 7%;
@@ -149,29 +150,29 @@
 
         .section-title {
             text-align: center;
-            font-size: 42px;
+            font-size: 40px;
             margin-bottom: 15px;
         }
 
         .section-title span {
-            color: #ff3b30;
+            color: #ef4444;
         }
 
         .section-description {
-            text-align: center;
-
             max-width: 650px;
-            margin: 0 auto 50px;
+            margin: 0 auto 45px;
+
+            text-align: center;
 
             color: #9ca3af;
             line-height: 1.7;
         }
 
 
-        /* ---------- CARS ---------- */
+        /* ===== CARS SECTION ===== */
 
         #cars {
-            background: #101522;
+            background-color: #111827;
         }
 
         .car-container {
@@ -179,102 +180,82 @@
             margin: auto;
 
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
-            gap: 30px;
+            gap: 25px;
         }
 
 
-        /* ---------- CAR CARD ---------- */
+        /* ===== CAR CARD ===== */
 
         .car-card {
-            background: #171d2b;
-
-            border: 1px solid #2b3345;
-
-            border-radius: 15px;
-
             overflow: hidden;
+
+            background-color: #1f2937;
+
+            border: 1px solid #374151;
+            border-radius: 12px;
 
             transition: 0.3s;
         }
 
         .car-card:hover {
-            transform: translateY(-10px);
-
-            border-color: #ff3b30;
-
-            box-shadow:
-                0 15px 40px rgba(255, 59, 48, 0.15);
+            transform: translateY(-8px);
+            border-color: #ef4444;
+            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.15);
         }
-
-
-        /* ---------- CAR IMAGE ---------- */
 
         .car-image {
             width: 100%;
             height: 220px;
 
-            object-fit: cover;
-
             display: block;
+
+            object-fit: cover;
         }
-
-
-        /* ---------- CAR CONTENT ---------- */
 
         .car-info {
             padding: 25px;
         }
 
         .car-info h3 {
-            font-size: 25px;
+            font-size: 24px;
             margin-bottom: 8px;
         }
 
         .car-type {
-            color: #ff3b30;
-            font-size: 14px;
+            color: #ef4444;
+            font-size: 13px;
             font-weight: bold;
-
             margin-bottom: 15px;
         }
 
         .car-description {
             color: #9ca3af;
-
             line-height: 1.6;
-
             margin-bottom: 20px;
         }
 
 
-        /* ---------- SPECS ---------- */
+        /* ===== CAR SPECIFICATIONS ===== */
 
         .specs {
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 10px;
 
             margin-bottom: 20px;
         }
 
         .spec {
-            background: #202738;
-
             padding: 12px;
 
+            background-color: #111827;
             border-radius: 6px;
         }
 
         .spec strong {
             display: block;
-
             color: white;
-
             margin-bottom: 4px;
         }
 
@@ -282,131 +263,117 @@
             color: #9ca3af;
         }
 
-
-        /* ---------- PRICE ---------- */
-
         .price {
-            font-size: 23px;
+            color: #ef4444;
+            font-size: 21px;
             font-weight: bold;
-
-            color: #ff3b30;
         }
 
 
-        /* ---------- ABOUT ---------- */
+        /* ===== ABOUT SECTION ===== */
 
         #about {
-            background: #0b0f19;
+            background-color: #0b0f19;
         }
 
         .about-box {
-            max-width: 900px;
-
+            max-width: 850px;
             margin: auto;
 
             padding: 40px;
 
-            background: #171d2b;
+            background-color: #1f2937;
 
-            border: 1px solid #2b3345;
-
-            border-radius: 15px;
+            border: 1px solid #374151;
+            border-radius: 12px;
 
             text-align: center;
         }
 
         .about-box p {
-            color: #b6bdca;
-
+            color: #d1d5db;
             line-height: 1.8;
-
             font-size: 17px;
         }
 
 
-        /* ---------- CONTACT ---------- */
+        /* ===== CONTACT SECTION ===== */
 
         #contact {
-            background: #101522;
+            background-color: #111827;
         }
 
         .contact-form {
             max-width: 600px;
-
             margin: auto;
 
             display: flex;
-
             flex-direction: column;
-
             gap: 15px;
         }
 
         .contact-form input,
         .contact-form textarea {
-
             width: 100%;
 
             padding: 15px;
 
-            background: #171d2b;
-
+            background-color: #1f2937;
             color: white;
 
-            border: 1px solid #2b3345;
-
+            border: 1px solid #374151;
             border-radius: 7px;
 
             font-size: 16px;
+            font-family: Arial, sans-serif;
 
             outline: none;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
-            border-color: #ff3b30;
+            border-color: #ef4444;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
         }
 
         .contact-form button {
-
             padding: 15px;
 
-            background: #ff3b30;
-
+            background-color: #ef4444;
             color: white;
 
             border: none;
-
             border-radius: 7px;
 
             font-size: 16px;
-
             font-weight: bold;
 
             cursor: pointer;
-
             transition: 0.3s;
         }
 
         .contact-form button:hover {
-            background: #ff6259;
+            background-color: #dc2626;
         }
 
 
-        /* ---------- FOOTER ---------- */
+        /* ===== FOOTER ===== */
 
         footer {
-            padding: 30px;
+            padding: 25px;
+
+            background-color: #030712;
 
             text-align: center;
 
-            background: #060810;
-
-            color: #707887;
+            color: #9ca3af;
         }
 
 
-        /* ---------- MOBILE ---------- */
+        /* ===== TABLET ===== */
 
         @media (max-width: 900px) {
 
@@ -416,7 +383,10 @@
 
         }
 
-        @media (max-width: 650px) {
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 600px) {
 
             nav {
                 flex-direction: column;
@@ -430,7 +400,7 @@
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 40px;
             }
 
             .hero p {
@@ -439,6 +409,10 @@
 
             .car-container {
                 grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
             }
 
             section {
@@ -485,7 +459,6 @@
     </nav>
 
 
-
     <!-- ================= HOME ================= -->
 
     <section id="home" class="hero">
@@ -498,8 +471,8 @@
             </h1>
 
             <p>
-                Explore some of the world's most exciting cars,
-                from luxury sports cars to powerful performance machines.
+                Explore amazing cars, compare their specifications,
+                and discover what makes each vehicle special.
             </p>
 
             <a href="#cars" class="hero-button">
@@ -511,7 +484,6 @@
     </section>
 
 
-
     <!-- ================= CARS ================= -->
 
     <section id="cars">
@@ -521,7 +493,8 @@
         </h2>
 
         <p class="section-description">
-            Take a look at some iconic cars and their key specifications.
+            Explore our collection of popular performance,
+            luxury and sports cars.
         </p>
 
 
@@ -535,24 +508,21 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80"
-                    alt="Sports car"
+                    alt="Porsche sports car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        Porsche 911
-                    </h3>
+                    <h3>Porsche 911</h3>
 
                     <div class="car-type">
                         SPORTS CAR
                     </div>
 
                     <p class="car-description">
-                        A legendary sports car known for its
-                        performance, handling and timeless design.
+                        A legendary sports car known for excellent
+                        performance, handling and design.
                     </p>
-
 
                     <div class="specs">
 
@@ -568,7 +538,7 @@
 
                         <div class="spec">
                             <strong>3.5 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -587,7 +557,6 @@
             </div>
 
 
-
             <!-- CAR 2 -->
 
             <div class="car-card">
@@ -595,24 +564,21 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80"
-                    alt="BMW car"
+                    alt="BMW sports car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        BMW M4
-                    </h3>
+                    <h3>BMW M4</h3>
 
                     <div class="car-type">
                         PERFORMANCE COUPE
                     </div>
 
                     <p class="car-description">
-                        A powerful performance coupe combining
-                        everyday comfort with thrilling performance.
+                        A powerful performance coupe that combines
+                        everyday comfort with exciting performance.
                     </p>
-
 
                     <div class="specs">
 
@@ -628,7 +594,7 @@
 
                         <div class="spec">
                             <strong>3.8 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -647,7 +613,6 @@
             </div>
 
 
-
             <!-- CAR 3 -->
 
             <div class="car-card">
@@ -655,24 +620,21 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80"
-                    alt="Luxury car"
+                    alt="Luxury sports car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        Mercedes-AMG GT
-                    </h3>
+                    <h3>Mercedes-AMG GT</h3>
 
                     <div class="car-type">
                         LUXURY SPORTS CAR
                     </div>
 
                     <p class="car-description">
-                        A luxurious performance car that combines
-                        elegant styling with impressive power.
+                        A luxury performance car combining elegant
+                        styling with impressive power.
                     </p>
-
 
                     <div class="specs">
 
@@ -688,7 +650,7 @@
 
                         <div class="spec">
                             <strong>3.2 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -707,7 +669,6 @@
             </div>
 
 
-
             <!-- CAR 4 -->
 
             <div class="car-card">
@@ -715,24 +676,21 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"
-                    alt="Mercedes car"
+                    alt="Mercedes Benz car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        Mercedes-Benz C-Class
-                    </h3>
+                    <h3>Mercedes-Benz C-Class</h3>
 
                     <div class="car-type">
                         LUXURY SEDAN
                     </div>
 
                     <p class="car-description">
-                        A refined luxury sedan offering comfort,
-                        technology and premium styling.
+                        A refined sedan offering comfort, technology
+                        and premium styling.
                     </p>
-
 
                     <div class="specs">
 
@@ -748,7 +706,7 @@
 
                         <div class="spec">
                             <strong>6.0 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -767,7 +725,6 @@
             </div>
 
 
-
             <!-- CAR 5 -->
 
             <div class="car-card">
@@ -775,14 +732,12 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80"
-                    alt="BMW sports car"
+                    alt="BMW M3 car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        BMW M3
-                    </h3>
+                    <h3>BMW M3</h3>
 
                     <div class="car-type">
                         PERFORMANCE SEDAN
@@ -790,9 +745,8 @@
 
                     <p class="car-description">
                         A high-performance sedan combining practicality
-                        with serious driving performance.
+                        with exciting driving performance.
                     </p>
-
 
                     <div class="specs">
 
@@ -808,7 +762,7 @@
 
                         <div class="spec">
                             <strong>4.1 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -827,7 +781,6 @@
             </div>
 
 
-
             <!-- CAR 6 -->
 
             <div class="car-card">
@@ -835,24 +788,21 @@
                 <img
                     class="car-image"
                     src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=900&q=80"
-                    alt="Lamborghini car"
+                    alt="Lamborghini sports car"
                 >
 
                 <div class="car-info">
 
-                    <h3>
-                        Lamborghini Huracán
-                    </h3>
+                    <h3>Lamborghini Huracan</h3>
 
                     <div class="car-type">
                         SUPERCAR
                     </div>
 
                     <p class="car-description">
-                        An exotic supercar famous for dramatic styling,
-                        a high-revving engine and incredible performance.
+                        An exotic supercar known for dramatic styling
+                        and incredible performance.
                     </p>
-
 
                     <div class="specs">
 
@@ -868,7 +818,7 @@
 
                         <div class="spec">
                             <strong>2.9 sec</strong>
-                            <small>0–100 km/h</small>
+                            <small>0-100 km/h</small>
                         </div>
 
                         <div class="spec">
@@ -891,7 +841,6 @@
     </section>
 
 
-
     <!-- ================= ABOUT ================= -->
 
     <section id="about">
@@ -901,22 +850,21 @@
         </h2>
 
         <p class="section-description">
-            Your place to explore interesting cars and their specifications.
+            A simple website for car enthusiasts.
         </p>
 
         <div class="about-box">
 
             <p>
-                AutoDrive is a fictional car information website created
-                for car enthusiasts. Explore different types of cars,
-                compare their specifications and discover what makes
-                each vehicle unique.
+                AutoDrive is a fictional car information website
+                created for people who love cars. Explore different
+                vehicles, learn about their specifications and
+                discover some of the world's most exciting cars.
             </p>
 
         </div>
 
     </section>
-
 
 
     <!-- ================= CONTACT ================= -->
@@ -928,25 +876,27 @@
         </h2>
 
         <p class="section-description">
-            Have a question about one of the cars? Send us a message.
+            Have a question? Send us a message below.
         </p>
 
-
-        <form class="contact-form">
+        <form class="contact-form" action="#" method="post">
 
             <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 required
             >
 
             <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 required
             >
 
             <textarea
+                name="message"
                 rows="6"
                 placeholder="Your Message"
                 required
@@ -961,13 +911,12 @@
     </section>
 
 
-
     <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 AutoDrive | Car Information Website
+            &copy; 2026 AutoDrive. All rights reserved.
         </p>
 
     </footer>
